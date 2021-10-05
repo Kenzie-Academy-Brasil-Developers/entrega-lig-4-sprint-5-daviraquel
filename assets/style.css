@@ -1,0 +1,24 @@
+.column{
+    width: 60px;
+    height: 400px;
+    background-color: rgb(177, 172, 172);
+    border: 1px solid black;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cel{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(224, 221, 221);
+    border: 1px solid black;
+}
+
+.table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
