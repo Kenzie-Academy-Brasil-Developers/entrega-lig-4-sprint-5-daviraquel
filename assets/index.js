@@ -100,24 +100,31 @@ geraArray(7,6)
 
 let counter = 0
 function addDisc(evt){
+    // implementando mostrador de player (vez do:)
+    const mostraPlayer = document.querySelector('.showPlayer')
+
     let disc = document.createElement("div")
+
     for(i = 0; i < evt.currentTarget.children.length; i++){
         if(evt.currentTarget.children[i].children.length === 0){
             if(counter === 0){
                 disc.className = "player1"
                 evt.currentTarget.children[i].appendChild(disc)
                 counter = 1
+                mostraPlayer.innerText = 'Vez do Player 1'
                 break
             }
             if(counter === 1){
                 disc.className = "player2"
                 evt.currentTarget.children[i].appendChild(disc)
                 counter = 0
+                mostraPlayer.innerText = 'Vez do Player 2'
                 break
             }
             
         }
     }
+
 }
 
 //item 4.4 : function by Robert
@@ -141,10 +148,9 @@ makeMessageDraw()
 //função que verifica a quantidade de elementos dentro da Table
 //caso condição satisfeita retorna div com menssagem de empate
 
-function verifyDraw(totalTableBols){
-    if (totalTableBols.childElementCount === 42){
-        return makeMessageDraw()
-    }
-}
-verifyDraw();
-
+// function verifyDraw(totalTableBols){
+//     if (totalTableBols.childElementCount === 42){
+//         return makeMessageDraw()
+//     }
+// }
+// verifyDraw();
