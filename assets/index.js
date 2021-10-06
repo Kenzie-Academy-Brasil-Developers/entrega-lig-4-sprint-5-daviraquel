@@ -94,7 +94,7 @@ function addDisc(evt){
 //item 4.4 : function by Robert
 //variável que armazena a table 
 
-let totalTableBols = document.getElementById('.table');
+let totalTableBols = document.querySelector('.table');
 
 const mSn = 'Deu empate!';
 
