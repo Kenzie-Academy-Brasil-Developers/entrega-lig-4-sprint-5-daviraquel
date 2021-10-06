@@ -41,8 +41,6 @@ function diagonalRightWin(){
         };
     };
 };
-//function by Theo
-
 
 function geraArray(colunas, linhas) {
 
@@ -55,6 +53,7 @@ function geraArray(colunas, linhas) {
 
         const divBoard = document.createElement('div')
         divBoard.setAttribute('class', 'column')
+        divBoard.addEventListener("click", addDisc)
         table.appendChild(divBoard)
 
         for (let o = 0; o <= linhas; o++) {
@@ -71,16 +70,7 @@ function geraArray(colunas, linhas) {
 
 geraArray(7,6)
 
-//function by Robert
-
-document.querySelectorAll("div").forEach( function(div) {
-
-    div.addEventListener("click", function(event) {
-    const el = event.target
-    const id = el.id;
-
-
-    });
-
-});
+function addDisc(evt){
+    console.log(evt.currentTarget) //retorna a coluna
+}
 
