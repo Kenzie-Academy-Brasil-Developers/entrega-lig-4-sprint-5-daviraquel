@@ -6,9 +6,9 @@ function horizontalWin(){
     for (let col = 0; col < 7; col++){
         for (let row = 0; row < 6; row++){
             if (tableCol[col].children[row].lastChild !== null) {
-                if (tableCol[col].children[row].lastChild.className === tableCol[col].children[row].lastChild.className &&
-                    tableCol[col].children[row].lastChild.className === tableCol[col].children[row].lastChild.className &&
-                    tableCol[col].children[row].lastChild.className === tableCol[col].children[row].lastChild.className) {
+                if (tableCol[col].children[row].lastChild.className === tableCol[col+1].children[row].lastChild.className &&
+                    tableCol[col].children[row].lastChild.className === tableCol[col+2].children[row].lastChild.className &&
+                    tableCol[col].children[row].lastChild.className === tableCol[col+3].children[row].lastChild.className) {
                         return true;
                     };
             };
