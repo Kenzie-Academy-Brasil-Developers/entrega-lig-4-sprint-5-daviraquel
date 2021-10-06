@@ -61,7 +61,6 @@ function geraArray(colunas, linhas) {
             const divCel = document.createElement('div')
             divCel.setAttribute('class', 'cel')
             divBoard.appendChild(divCel)
-
         }
     
     }
@@ -70,7 +69,25 @@ function geraArray(colunas, linhas) {
 
 geraArray(7,6)
 
+let counter = 0
 function addDisc(evt){
-    console.log(evt.currentTarget) //retorna a coluna
+    let disc = document.createElement("div")
+    for(i = 0; i < evt.currentTarget.children.length; i++){
+        if(evt.currentTarget.children[i].children.length === 0){
+            if(counter === 0){
+                disc.className = "player1"
+                evt.currentTarget.children[i].appendChild(disc)
+                counter = 1
+                break
+            }
+            if(counter === 1){
+                disc.className = "player2"
+                evt.currentTarget.children[i].appendChild(disc)
+                counter = 0
+                break
+            }
+            
+        }
+    }
 }
 
