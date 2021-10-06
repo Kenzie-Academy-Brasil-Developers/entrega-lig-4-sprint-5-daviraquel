@@ -1,78 +1,6 @@
 let tableRow = document.getElementsByClassName('cel');
 let tableCol = document.getElementsByClassName('column');
 
-// win condition horizontal
-function horizontalWin(){
-    for (let col = 0; col < 7; col++){
-        for (let row = 0; row < 6; row++){
-            if (tableCol[col].children[row].lastChild !== null) {
-                if (tableCol[col].children[row].lastChild.className === tableCol[col].children[row].lastChild.className &&
-                    tableCol[col].children[row].lastChild.className === tableCol[col].children[row].lastChild.className &&
-                    tableCol[col].children[row].lastChild.className === tableCol[col].children[row].lastChild.className) {
-                        return true;
-                    };
-            };
-        };
-    };
-    return false;
-};
-
-// win condition vertical
-function verticalWin(){
-    for (let col = 0; col < 7; col++){
-        for (let row = 3; row < 6; row++){
-            if (tableCol[col].children[row].lastChild !== null) {
-                if (tableCol[col].children[row].lastChild.className === tableCol[col].children[row-1].lastChild.className &&
-                    tableCol[col].children[row].lastChild.className === tableCol[col].children[row-2].lastChild.className &&
-                    tableCol[col].children[row].lastChild.className === tableCol[col].children[row-3].lastChild.className) {
-                        return true;
-                    };
-            };
-        };
-    };
-    return false;
-};
-
-//win condition diagonal left
-function diagonalLeftWin(){
-    for (let col = 3; col < 7; col++){
-        for (let row = 0; row < 3; row++){
-            if (tableCol[col].children[row].lastChild &&
-                tableCol[col-1].children[row+1].lastChild &&
-                tableCol[col-2].children[row+2].lastChild &&
-                tableCol[col-3].children[row+3].lastChild !== null) {
-
-                if (tableCol[col].children[row].lastChild.className === tableCol[col-1].children[row+1].lastChild.className &&
-                    tableCol[col].children[row].lastChild.className === tableCol[col-2].children[row+2].lastChild.className &&
-                    tableCol[col].children[row].lastChild.className === tableCol[col-3].children[row+3].lastChild.className) {
-                        return true;
-                    };
-            }
-        };
-    };
-    return false;
-};
-
-//win condition diagonal right
-function diagonalRightWin(){
-    for (let col = 0; col < 4; col++){
-        for (let row = 0; row < 3; row++){
-            if (tableCol[col].children[row].lastChild &&
-                tableCol[col+1].children[row+1].lastChild &&
-                tableCol[col+2].children[row+2].lastChild &&
-                tableCol[col+3].children[row+3].lastChild !== null) {
-
-                if (tableCol[col].children[row].lastChild.className === tableCol[col+1].children[row+1].lastChild.className &&
-                    tableCol[col].children[row].lastChild.className === tableCol[col+2].children[row+2].lastChild.className &&
-                    tableCol[col].children[row].lastChild.className === tableCol[col+3].children[row+3].lastChild.className) {
-                        return true;
-                    };
-            }
-        };
-    };
-    return false;
-};
-
 function geraArray(colunas, linhas) {
 
     const body = document.querySelector('body')
@@ -101,9 +29,11 @@ function geraArray(colunas, linhas) {
 geraArray(7,6)
 
 let counter = 0
+
+const mostraPlayer = document.querySelector('.showPlayer')
+
 function addDisc(evt){
     // implementando mostrador de player (vez do:)
-    const mostraPlayer = document.querySelector('.showPlayer')
 
     let disc = document.createElement("div")
 
@@ -113,61 +43,60 @@ function addDisc(evt){
                 disc.className = "player1"
                 evt.currentTarget.children[i].appendChild(disc)
                 counter = 1
-                mostraPlayer.innerText = 'Vez do Player 1'
+                mostraPlayer.innerText = 'Vez do Player 2'
                 break
             }
             if(counter === 1){
                 disc.className = "player2"
                 evt.currentTarget.children[i].appendChild(disc)
                 counter = 0
-                mostraPlayer.innerText = 'Vez do Player 2'
+                mostraPlayer.innerText = 'Vez do Player 1'
                 break
             }
             
         }
     }
-
+    let horizontal = horizontalWin()
+    let vertical = verticalWin()
+    let diagonalLeft = diagonalLeftWin()
+    let diagonalRight = diagonalRightWin()
+    let draw = verifyDraw()
+    if(horizontal === true ||vertical === true || diagonalLeft === true|| diagonalRight === true){
+        winMessage()
+        remEvents()
+    }
+    if(draw === true){
+        makeMessageDraw()
+    }
 }
 
-//item 4.4 : function by Robert
-//variável que armazena a table 
 
-let totalTableBols = document.querySelector('.table');
-
-const mSn = 'Deu empate!';
-
-//função que gera uma div com a menssagem de empate
-
-function makeMessageDraw(mSn){
-    const boxMsn = document.querySelector("#boxMsn")
-    const msn = document.createElement('div')
-    msn.innerText = mSn;
-    boxMsn.appendChild(msn);
-    return msn;
-}
-makeMessageDraw()
-
-//função que verifica a quantidade de elementos dentro da Table
-//caso condição satisfeita retorna div com menssagem de empate
-
-// function verifyDraw(totalTableBols){
-//     if (totalTableBols.childElementCount === 42){
-//         return makeMessageDraw()
-//     }
-// }
-// verifyDraw();
 
 // Função Reset
-
 function resetGame(){
-    
     const celulas = document.querySelectorAll('.cel')
 
     celulas.forEach(function(celula){
         celula.innerHTML = ''
     })
+    mostraPlayer.innerText = 'Vez do Player 1'
+    counter = 0
+    addEvents()
+}
+
+function remEvents(){
+    const colunas = document.querySelectorAll('.column')
+    for(i = 0; i < colunas.length; i++){
+        colunas[i].removeEventListener("click", addDisc)
+    }
+}
+
+function addEvents(){
+    const colunas = document.querySelectorAll('.column')
+    for(i = 0; i < colunas.length; i++){
+        colunas[i].addEventListener("click", addDisc)
+    }
 }
 
 const buttonReset = document.querySelector('.buttonReset')
-
 buttonReset.addEventListener('click', resetGame)
