@@ -125,3 +125,18 @@ makeMessageDraw()
 //     }
 // }
 // verifyDraw();
+
+// Função Reset
+
+function resetGame(){
+    
+    const celulas = document.querySelectorAll('.cel')
+
+    celulas.forEach(function(celula){
+        celula.innerHTML = ''
+    })
+}
+
+const buttonReset = document.querySelector('.buttonReset')
+
+buttonReset.addEventListener('click', resetGame)
