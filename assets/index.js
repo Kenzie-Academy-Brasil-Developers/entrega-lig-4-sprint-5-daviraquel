@@ -30,7 +30,7 @@ function geraArray(colunas, linhas) {
 geraArray(7,6)
 
 //item 2.2 : function by Robert
-//intercepta o clique na celular ta table
+//intercepta o clique na celula ta table
 //retorna o id do target
 
 document.querySelectorAll("div").forEach( function(div) {
@@ -50,7 +50,7 @@ document.querySelectorAll("div").forEach( function(div) {
 
 //variável que armazena a table 
 
-let totalTableBols = document.getElementById('.table');
+let totalTableBols = document.getElementById('#table');
 
 const mSn = 'Deu empate!';
 
