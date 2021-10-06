@@ -91,3 +91,31 @@ function addDisc(evt){
     }
 }
 
+//item 4.4 : function by Robert
+//variável que armazena a table 
+
+let totalTableBols = document.getElementById('.table');
+
+const mSn = 'Deu empate!';
+
+//função que gera uma div com a menssagem de empate
+
+function makeMessageDraw(mSn){
+    const boxMsn = document.querySelector("#boxMsn")
+    const msn = document.createElement('div')
+    msn.innerText = mSn;
+    boxMsn.appendChild(msn);
+    return msn;
+}
+makeMessageDraw()
+
+//função que verifica a quantidade de elementos dentro da Table
+//caso condição satisfeita retorna div com menssagem de empate
+
+function verifyDraw(totalTableBols){
+    if (totalTableBols.childElementCount === 42){
+        return makeMessageDraw()
+    }
+}
+verifyDraw();
+
