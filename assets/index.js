@@ -85,7 +85,7 @@ function geraArray(colunas, linhas) {
         divBoard.addEventListener("click", addDisc)
         table.appendChild(divBoard)
 
-        for (let o = 0; o <= linhas; o++) {
+        for (let o = 0; o <= linhas -1; o++) {
 
             const divCel = document.createElement('div')
             divCel.setAttribute('class', 'cel')
