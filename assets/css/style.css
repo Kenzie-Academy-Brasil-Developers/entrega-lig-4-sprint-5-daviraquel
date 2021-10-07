@@ -49,6 +49,7 @@ body{
 .buttonReset:hover{
     cursor: pointer;
     background-color: #ffa2ee;
+    box-shadow: 0 0 1em #EF53D3;
 }
 
 #boxMsn div{
