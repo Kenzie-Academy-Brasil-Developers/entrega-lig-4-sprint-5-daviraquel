@@ -2,13 +2,7 @@ let tableRow = document.getElementsByClassName('cel');
 let tableCol = document.getElementsByClassName('column');
 
 function geraArray(colunas, linhas) {
-
     const table = document.querySelector('.table')
-    // const body = document.querySelector('body')
-    // const table = document.createElement('section')
-    // table.setAttribute('class', 'table')
-    // body.appendChild(table)
-
     for (let i = 0; i <= colunas - 1; i++) {
 
         const divBoard = document.createElement('div')
@@ -26,13 +20,10 @@ function geraArray(colunas, linhas) {
     }
     return 
 }
-
 geraArray(7,6)
 
 let counter = 0
-
 const mostraPlayer = document.querySelector('.showPlayer')
-
 function addDisc(evt){
     // implementando mostrador de player (vez do:)
 
@@ -73,9 +64,6 @@ function addDisc(evt){
     }
 }
 
-
-
-// Função Reset
 function resetGame(){
     const celulas = document.querySelectorAll('.cel')
 

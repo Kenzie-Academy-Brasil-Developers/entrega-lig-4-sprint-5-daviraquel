@@ -1,10 +1,3 @@
-//condição de empate
-//função que verifica a quantidade de elementos dentro da Table
-//caso condição satisfeita retorna div com menssagem de empate
-
-//item 4.4 : function by Robert
-//variável que armazena a table 
-
 function verifyDraw(){
     const player1Discs = document.querySelectorAll('.player1').length
     const player2Discs = document.querySelectorAll('.player2').length
@@ -15,7 +8,6 @@ function verifyDraw(){
     }
 }
 
-// win condition horizontal
 function horizontalWin(){
     for (let col = 0; col < 4; col++){
         for (let row = 0; row < 6; row++){
@@ -34,7 +26,6 @@ function horizontalWin(){
     return false;
 };
 
-// win condition vertical
 function verticalWin(){
     for (let col = 0; col < 7; col++){
         for (let row = 3; row < 6; row++){
@@ -50,7 +41,6 @@ function verticalWin(){
     return false;
 };
 
-//win condition diagonal left
 function diagonalLeftWin(){
     for (let col = 3; col < 7; col++){
         for (let row = 0; row < 3; row++){
@@ -70,7 +60,6 @@ function diagonalLeftWin(){
     return false;
 };
 
-//win condition diagonal right
 function diagonalRightWin(){
     for (let col = 0; col < 4; col++){
         for (let row = 0; row < 3; row++){

@@ -5,7 +5,6 @@ body{
     background-position: inherit;
     font-family: 'Candy Crush', sans-serif;
     text-align: center;
-    
 }
 
 .kenzieCrush{
@@ -14,15 +13,12 @@ body{
     font-size: 17vw;
     font-family: 'Candy Crush', sans-serif;
     padding: 10px;
-
     color: #fff;
-    
 }
 
 .kenzieCrush img{
     width: 90vw;
 }
-
 
 .showPlayer{
     text-align: center;
@@ -47,7 +43,6 @@ body{
     border-radius: 12px;
     background-color: #34AFEC;
     color: #E5CEA4;
-
 }
 
 .buttonReset:hover{
@@ -72,11 +67,10 @@ body{
     align-content: center;
     justify-content: space-around;
     flex-direction: column-reverse;
-
     max-width: 70px;
     max-height: 390px;
-
 }
+
 .column:hover{
     opacity: 0.7;
 }
@@ -89,7 +83,6 @@ body{
 .cel{
     width: 45px;
     height: 45px;
-
 }
 
 .table{
@@ -111,9 +104,11 @@ body{
     background-image: url(../img/jujubateste2.png);
     background-repeat: no-repeat;
 }
+
 .player1,.player2{
     animation: caindo .2s;
 }
+
  @keyframes caindo{
     50%{
         transform: translateY(25px);
@@ -123,9 +118,7 @@ body{
     }
 }
 
-
 @media screen and (min-width: 768px){
-
     body{
         background-position: right;
     }
@@ -134,7 +127,6 @@ body{
         height: 8vw;
         font-size: 7vw;
     }
-    
     
     .showPlayer{
         height: 3vw;

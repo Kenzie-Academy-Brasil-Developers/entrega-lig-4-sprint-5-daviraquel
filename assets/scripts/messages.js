@@ -1,13 +1,9 @@
 //empate
 const mSn = 'Deu empate!';
-
-//função que gera uma div com a menssagem de empate
-
 function makeMessageDraw(){
     const boxMsn = document.querySelector(".showPlayer")
     boxMsn.innerText = mSn
 }
-
 
 //vitória
 function winMessage(){
