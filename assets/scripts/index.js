@@ -3,10 +3,11 @@ let tableCol = document.getElementsByClassName('column');
 
 function geraArray(colunas, linhas) {
 
-    const body = document.querySelector('body')
-    const table = document.createElement('section')
-    table.setAttribute('class', 'table')
-    body.appendChild(table)
+    const table = document.querySelector('.table')
+    // const body = document.querySelector('body')
+    // const table = document.createElement('section')
+    // table.setAttribute('class', 'table')
+    // body.appendChild(table)
 
     for (let i = 0; i <= colunas - 1; i++) {
 
