@@ -14,11 +14,11 @@ function winMessage(){
     let mensagemVitória = document.querySelector(".showPlayer")
     if(counter === 1){
         mensagemVitória.innerText = "vitória player1"
-        mensagemVitória.style.color = "purple"
-        mensagemVitória.style.backgroundColor = "#64c74b"
+        mensagemVitória.style.color = "#DC31BE"
+        mensagemVitória.style.backgroundColor = "transparent"
     }else{
         mensagemVitória.innerText = "vitória player2"
-        mensagemVitória.style.color = "red"
-        mensagemVitória.style.backgroundColor = "#64c74b"
+        mensagemVitória.style.color = "#DC31BE"
+        mensagemVitória.style.backgroundColor = "transparent"
     }
 }
