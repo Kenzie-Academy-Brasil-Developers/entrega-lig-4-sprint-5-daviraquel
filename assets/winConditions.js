@@ -10,7 +10,7 @@ function verifyDraw(){
     const player2Discs = document.querySelectorAll('.player2').length
     if(player1Discs > 0){
         if(player1Discs + player2Discs === 42){
-            console.log("empate")
+            makeMessageDraw()
         }
     }
 }

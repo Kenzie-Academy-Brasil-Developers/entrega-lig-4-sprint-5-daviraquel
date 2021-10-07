@@ -9,7 +9,7 @@ function makeMessageDraw(){
     msn.innerText = mSn
     boxMsn.appendChild(msn)
 }
-makeMessageDraw()
+
 
 //vitória
 function winMessage(){

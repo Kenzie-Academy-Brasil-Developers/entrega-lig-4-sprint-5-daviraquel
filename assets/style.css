@@ -1,20 +1,74 @@
+@import url('http://fonts.cdnfonts.com/css/candy-crush');
+
+body{
+    background-image: url(fundo_blur.jpg);
+    background-repeat: no-repeat;
+    background-color: #A3AA00;
+    background-position: inherit;
+
+    font-family: 'Candy Crush', sans-serif;
+    text-align: center;
+    
+}
+
+.kenzieCrush{
+    text-align: center;
+    height: 23vw;
+    font-size: 17vw;
+    font-family: 'Candy Crush', sans-serif;
+    padding: 10px;
+
+    color: #fff;
+    
+}
+
+
+.showPlayer{
+    text-align: center;
+    height: 6vw;
+    font-size: 7vw;
+
+    text-transform: uppercase;
+    font-family:'Candy Crush', sans-serif;
+}
+
+.buttonReset{
+    margin: 10px;
+    border: 0px;
+    font-family: 'Candy Crush';
+    width: 66px;
+    font-size: 18px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #EF53D3;
+
+}
+
+#boxMsn div{
+    text-align: center;
+    height: 10vw;
+    font-size: 7vw;
+}
+
 .column{
-    width: 60px;
-    height: 400px;
-    background-color: rgb(177, 172, 172);
-    border: 1px solid black;
+    width: 40vw;
+    height: 60vh;
+    border: 0.4px solid #4DA0FE; 
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-around;
     flex-direction: column-reverse;
+
+    max-width: 70px;
+    max-height: 390px;
+
 }
 
 .cel{
-    width: 50px;
-    height: 50px;
-    background-color: rgb(224, 221, 221);
-    border: 1px solid black;
+    width: 45px;
+    height: 45px;
+
 }
 
 .table{
@@ -24,21 +78,44 @@
 }
 
 .player1 {
-    width: 50px;
-    height: 50px;
-    background-color: red;
-    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background-image: url(jujubateste.png);
+    background-repeat: no-repeat;
 }
 
 .player2 {
-    width: 50px;
-    height: 50px;
-    background-color: black;
-    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background-image: url(jujubateste2.png);
+    background-repeat: no-repeat;
 }
 
-.discRed{
-    width: 50px;
-    height: 50px;
-    background-color: rgb(255, 0, 0);
+@media screen and (min-width: 768px){
+
+    body{
+        background-position: right;
+    }
+    
+    .kenzieCrush{
+        height: 8vw;
+        font-size: 7vw;
+    }
+    
+    
+    .showPlayer{
+        height: 3vw;
+        font-size: 3vw;
+    }
+    
+    .buttonReset{
+        width: 96px;
+        font-size: 19px;
+        height: 34px;
+    }
+    
+    #boxMsn div{
+        height: 3.5vw;
+        font-size: 3vw;
+    }
 }
