@@ -74,6 +74,9 @@ body{
     max-height: 390px;
 
 }
+.column:hover{
+    opacity: 0.7;
+}
 
 .cel{
     width: 45px;
