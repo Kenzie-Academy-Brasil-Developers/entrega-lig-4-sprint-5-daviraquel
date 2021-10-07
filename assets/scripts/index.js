@@ -45,7 +45,7 @@ function addDisc(evt){
                 evt.currentTarget.children[i].appendChild(disc)
                 counter = 1
                 mostraPlayer.innerText = 'Vez do Player 2'
-                mostraPlayer.style.color = "red"
+                mostraPlayer.style.color = "#E5CEA4"
                 break
             }
             if(counter === 1){
@@ -53,7 +53,7 @@ function addDisc(evt){
                 evt.currentTarget.children[i].appendChild(disc)
                 counter = 0
                 mostraPlayer.innerText = 'Vez do Player 1'
-                mostraPlayer.style.color = "purple"
+                mostraPlayer.style.color = "#E5CEA4"
                 break
             }
             
@@ -83,7 +83,7 @@ function resetGame(){
         celula.innerHTML = ''
     })
     mostraPlayer.innerText = 'Vez do Player 1'
-    mostraPlayer.style.color = "purple"
+    mostraPlayer.style.color = "#E5CEA4"
     mostraPlayer.style.backgroundColor = "transparent"
     counter = 0
     addEvents()

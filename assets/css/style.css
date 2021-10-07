@@ -19,11 +19,15 @@ body{
     
 }
 
+.kenzieCrush img{
+    width: 90vw;
+}
+
 
 .showPlayer{
     text-align: center;
-    height: 6vw;
-    font-size: 7vw;
+    height: 13vw;
+    font-size: 9vw;
     width: 310px;
     margin: 0 auto;
     padding: 0.5em 0;
@@ -36,12 +40,18 @@ body{
     margin: 10px;
     border: 0px;
     font-family: 'Candy Crush';
-    width: 66px;
-    font-size: 18px;
-    height: 24px;
+    width: 68px;
+    font-size: 23px;
+    opacity: 0.9;
+    height: 40px;
     border-radius: 12px;
-    background-color: #EF53D3;
+    background-color: #34AFEC;
+    color: #E5CEA4;
 
+}
+
+.buttonReset:hover{
+    opacity: 0.8;
 }
 
 #boxMsn div{
@@ -106,16 +116,21 @@ body{
     .showPlayer{
         height: 3vw;
         font-size: 3vw;
+        width: 410px;
     }
     
     .buttonReset{
-        width: 96px;
+        width: 125px;
         font-size: 19px;
-        height: 34px;
+        height: 51px;
     }
     
     #boxMsn div{
         height: 3.5vw;
         font-size: 3vw;
+    }
+
+    .kenzieCrush img{
+        width: 35vw;
     }
 }
