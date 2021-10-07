@@ -103,6 +103,18 @@ body{
     background-image: url(../img/jujubateste2.png);
     background-repeat: no-repeat;
 }
+.player1,.player2{
+    animation: caindo .2s;
+}
+ @keyframes caindo{
+    50%{
+        transform: translateY(25px);
+    }
+    50%{
+        transform: translateY(-25px);
+    }
+}
+
 
 @media screen and (min-width: 768px){
 
