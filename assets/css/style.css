@@ -46,6 +46,11 @@ body{
 
 }
 
+.buttonReset:hover{
+    cursor: pointer;
+    background-color: #ffa2ee;
+}
+
 #boxMsn div{
     text-align: center;
     height: 10vw;
@@ -65,6 +70,11 @@ body{
     max-width: 70px;
     max-height: 390px;
 
+}
+
+.column:hover{
+    cursor: pointer;
+    box-shadow: inset 0 0 1em #ffa2ee, 0 0 1em #EF53D3;
 }
 
 .cel{
