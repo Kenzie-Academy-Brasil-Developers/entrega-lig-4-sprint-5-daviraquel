@@ -3,7 +3,7 @@ body{
     background-repeat: no-repeat;
     background-color: #A3AA00;
     background-position: inherit;
-    font-family: 'Candy Crush', sans-serif;
+    font-family: sans-serif;
     text-align: center;
     
 }
@@ -12,7 +12,7 @@ body{
     text-align: center;
     height: 23vw;
     font-size: 17vw;
-    font-family: 'Candy Crush', sans-serif;
+    font-family: sans-serif;
     padding: 10px;
 
     color: #fff;
@@ -33,7 +33,7 @@ body{
     padding: 0.5em 0;
     border-radius: 0.5em;
     text-transform: uppercase;
-    font-family:'Candy Crush', sans-serif;
+    font-family:sans-serif;
 }
 
 .buttonReset{
